@@ -1,8 +1,8 @@
 // index.js
 
-var REST_DATA = 'http://ibmcert.mybluemix.net/api/ibmcert';
+var REST_DATA = 'http://ibmcert.mybluemix.net/api/stage';
  
-var KEY_ENTER = 13;
+var KEY_ENTER = 13; 
 var defaultItems = [];
 
 function getParameterByName(name, url) {
