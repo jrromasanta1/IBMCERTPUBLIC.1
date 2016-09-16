@@ -1,25 +1,363 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-	<title>Java Web Starter Application</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-	<table>
-		<tr>
-			<td style='width: 30%;'>
-				<img class = "newappIcon" src='images/newapp-icon.png'>
-			</td>
-			<td>
-				<!-- The "Hello World!" message comes from /SimpleServlet -->
-				<h1 id = "message"></h1>
-				
-				<p class='description'></p> Thanks for creating a <span class="blue">Liberty for Java Starter Application</span>.
-			</td>
-		</tr>
-	</table>
-	<!-- Call SimpleServlet to get the "Hello World" message  -->
-	<script type="text/javascript" src="index.js"></script>
-</body>
+    <meta charset="utf-8"/>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />      
+    <link rel="shortcut icon" href="//www.ibm.com/favicon.ico" />
+    
+	<meta name="geo.country" content="US" /> 
+	<meta name="dcterms.rights" content="Copyright IBM Corp. 2015" /> 
+	<meta name="dcterms.date" content="REPLACE" /> 
+	<meta name="description" content="REPLACE" /> 
+	<meta name="keywords" content="REPLACE" /> 
+	<meta name="robots" content="index, follow" /> 
+    <title>IBM Professional Certification Program</title>
+    
+    
+	<script> 
+		 digitalData = {
+		  "page":{
+		    "category":{
+		      "primaryCategory":"REPLACE"
+		    },
+		    "pageInfo":{
+		      "effectiveDate":"REPLACE",
+		      "expiryDate":"REPLACE",
+		      "language":"en-US",
+		      "publishDate":"REPLACE",
+		      "publisher":"IBM Corporation",
+		      "version":"v18",
+		      "ibm":{
+		        "contentDelivery":"REPLACE",
+		        "contentProducer":"REPLACE",
+		        "country":"US",
+		        "industry":"REPLACE",
+		        "owner":"REPLACE",
+		        "subject":"REPLACE",
+		        "type":"REPLACE"
+		      }
+		    }
+		  }
+		}; 
+	 </script>
+    <script src="//www.ibm.com/common/stats/ida_stats.js"></script>
+    <link href="//1.www.s81c.com/common/v18/css/www.css" rel="stylesheet" />
+    <script src="//1.www.s81c.com/common/v18/js/www.js"></script>
+
+<script type="text/javascript">
+	function highlight(id){
+	if(id=="nav"){
+		document.getElementById(id).className += " ibm-background-blue-60";
+		document.getElementById("backband").className += " ibm-background-blue-60";
+	}else{
+		document.getElementById(id).className += " ibm-background-blue-60";
+	}
+	
+	}
+</script>
+<script type="text/javascript">
+	function lowlight(id){
+	
+	if(id=="nav"){
+		document.getElementById(id).className = "ibm-col-6-2 ibm-alternate-background ibm-center ibm-padding-bottom-0 ibm-padding-top-0 ibm-background-blue-50";
+		document.getElementById("backband").className = "ibm-band ibm-nospacing ibm-background-blue-50";
+	}else{
+		document.getElementById(id).className = "ibm-col-6-2 ibm-alternate-background ibm-center ibm-padding-bottom-0 ibm-padding-top-0 ibm-background-blue-50";
+	}
+	
+	}
+</script>
+    
+	<script type="text/javascript">
+		 IBMCore.common.util.config.set({
+		  "masthead":{
+		    "type":"alternate"
+		  },
+		  "footer":{
+		    "type":"alternate"
+		  }
+		});  
+	 </script>
+  </head>
+  <body id="ibm-com" class="ibm-type">
+    <div id="ibm-top" class="ibm-landing-page">
+
+      <!-- MASTHEAD_BEGIN -->
+      <div id="ibm-masthead" role="banner" aria-label="IBM">
+        <div id="ibm-mast-options">
+          <ul role="toolbar" aria-labelledby="ibm-masthead">
+            <li id="ibm-geo" role="presentation"><a href="http://www.ibm.com/planetwide/select/selector.html" role="button" aria-label="United States selected - Choose a country">United States</a></li>
+            <li id="ibm-language" role="presentation"><span class="ibm-active" role="button" aria-disabled="true">English</span> <a href="http://www.ibm.com/us/en/" lang="en-US" role="button">English</a></li>
+          </ul>
+        </div>
+        <div id="ibm-universal-nav">    
+          
+
+          <nav role="navigation" aria-label="IBM">
+            <div id="ibm-home"><a href="http://www.ibm.com/us/en/">IBM®</a></div>
+            
+			<!--
+			<ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+              <li><a href="http://www.ibm.com/sitemap/us/en/">Site map</a></li>
+            </ul> -->
+			
+          </nav>
+          		  <!--
+          <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+            <form id="ibm-search-form" action="http://www.ibm.com/Search/" method="get">
+              <p>
+                <label for="q">IBM</label>
+                <input type="text" maxlength="100" value="" placeholder="Search" name="q" id="q" aria-label="Search"/>
+                <input type="hidden" value="18" name="v"/>
+                <input type="hidden" value="utf" name="en"/>
+                <input type="hidden" value="en" name="lang"/>
+                <input type="hidden" value="us" name="cc"/>
+                <input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit"/>
+              </p>
+            </form>
+          </div>
+		  -->
+		  
+        </div>
+      </div>
+      <!-- MASTHEAD_END -->
+		<!-- MASTHEAD_END -->
+		<header role="banner" aria-labelledby="ibm-pagetitle-h1">
+						<div class="ibm-sitenav-menu-container">  
+		<div  class="ibm-sitenav-menu-name"><a href="index.html" class="ibm-h4">IBM Professional Certification Program</a></div>  
+ <div class="ibm-sitenav-menu-list">
+			<ul role="menubar">
+				<li role="presentation" class="ibm-haschildlist"><span  role="menuitem">Certificates</span>
+				<ul role="menu">
+						<li  role="presentation"><a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="/productpage.html" >IBM Analytics</a></li>  
+						<li  role="presentation"><a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" >IBM Cloud</a></li>
+						<li  role="presentation"><a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" >IBM Cognitive Solutions</a></li>
+						<li  role="presentation"><a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" >IBM Commerce</a></li>
+						<li  role="presentation"><a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" >IBM Global Technology Services</a></li>
+						<li  role="presentation"><a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" >IBM Systems</a></li>
+						<li  role="presentation"><a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" >IBM Watson</a></li>
+						<li  role="presentation"><a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" >IBM Watson Health</a></li>
+						<li  role="presentation"><a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" >IBM Watson IOT</a></li> 
+					
+					</ul>	
+				</li>
+				<li role="presentation" ><span role="menuitem" >Why Get Certified?</span>
+				</li>
+				<li role="presentation" ><span role="menuitem" >Member Site</span>
+					
+				</li>
+				<li role="presentation" ><span role="menuitem" >Policy</span>	
+				</li>				
+      <li role="presentation"><a role="menuitem" href="#">Help</a></li>
+			</ul>
+		</div>
+	</div>		
+		
+		
+			
+</header> 
+      
+      <div id="ibm-content-wrapper">
+      
+        <!-- LEADSPACE_BEGIN -->
+        
+            <header role="banner" aria-labelledby="ibm-pagetitle-h1">
+
+          
+		  			<div class="ibm-band ibm-padding-top-3 ibm-padding-bottom-3 ibm-alternate-background" style="background: #fff url(/certify/bluemix/img/frontpage_header.png)  no-repeat 50% 0  / cover;">
+				<div class="ibm-columns">
+					<div class="ibm-col-6-4 ibm-padding-top-3 ibm-padding-bottom-3">
+						<h3 class="ibm-h1 ibm-padding-bottom-1">IBM Professional Certification Program</h3>
+						<p class="ibm-h4 ">Certify your skills. Accelerate your career.</p>
+						<p class="ibm-button-link ibm-padding-top-1">
+						<a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;"  href="/productpage.html" class="ibm-btn-pri ">IBM Analytics</a> 
+						<a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" class="ibm-btn-pri">IBM Cloud</a>
+						<a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" class="ibm-btn-pri">IBM Cognitive Solutions</a>
+						<a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" class="ibm-btn-pri">IBM Commerce</a>
+						<a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" class="ibm-btn-pri ">IBM Global Technology Services</a>
+						<a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" class="ibm-btn-pri ">IBM Systems</a>
+						<a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" class="ibm-btn-pri ">IBM Watson</a>
+						<a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" class="ibm-btn-pri ">IBM Watson Health</a>
+						<a style="min-width:50px;min-height50px;margin-bottom: 5px;font-weight:bolder;" href="#" class="ibm-btn-pri">IBM Watson IOT</a>
+						</p>
+					</div>
+				</div>
+			</div> 
+		  
+   
+          <!-- LEADSPACE_END -->
+
+          <!-- CONTENT_NAV_BEGIN -->
+<!--                  
+				  <nav role="navigation" aria-labelledby="ibm-pagetitle-h1">
+            <div id="ibm-content-nav">
+              <div id="ibm-primary-tabs">
+                <ul class="ibm-tabs">
+                  
+                                    <li class="ibm-active">
+                    <a href="Link URL">Link label</a>
+                  </li>
+                                    
+                </ul>
+              </div>
+                            <div id="ibm-secondary-tabs">
+                <ul class="ibm-tabs">
+                  
+                                      <li >
+                      <a href="Sublink URL">Sublink label</a>
+                    </li>
+                                  
+                </ul>
+              </div>
+                          </div> 
+          </nav> -->
+                    <!-- CONTENT_NAV_END -->
+			
+
+        </header>
+         
+		 <div id="backband" class="ibm-band ibm-background-white-core ibm-padding-bottom-r0 ibm-padding-top-r0" style="padding-bottom: 0px; padding-top: 0px;"> 
+			
+			<div data-widget="dyntabs" class="ibm-graphic-tabs ibm-graphic-tabs--colored">
+
+    <div class="ibm-tab-section">
+        <ul class="ibm-tabs ibm-background-blue-50 ibm-border-orange-30 ibm-textcolor-white-core" role="tablist">
+            <li><a role="tab" href="http://www-03.ibm.com/certify/"><b>Certificates</b></a></li>
+            <li><a role="tab" href="http://www-03.ibm.com/certify/"><b>Why Get Certified?</b></a></li>
+            <li><a role="tab" href="http://www-03.ibm.com/certify/member/ccsc.nsf"><b>Member Site</b></a></li>
+            <li><a role="tab" href="http://www-03.ibm.com/certify/badges.shtml"><b>Policy</b></a></li>
+        </ul>
+    </div>
+
+</div> 
+		
+		</div>		
+		
+        <main role="main" aria-labelledby="ibm-pagetitle-h1">
+          <div id="ibm-pcon">
+            <div id="ibm-content">
+              <div id="ibm-content-body" style="padding-top: 0px;">
+	
+                <div id="ibm-content-main">
+                               
+					   
+                  <div class="ibm-columns">
+                    <div class="ibm-col-1-1">
+           		<div class="ibm-columns ibm-cards" data-widget="setsameheight" data-always="true" data-items=".ibm-card">
+								<div class="ibm-col-5-1 ibm-col-medium-5-5">
+									<div class="ibm-card ibm-border-gray-30">
+										<div class="ibm-card__heading ibm-h4 ibm-bold ibm-border-blue-50 " style="border-bottom-style: solid; border-bottom-width: 5px; padding-bottom: 10px; padding-top: 10px;">Promotions</div>
+										
+										<div class="ibm-card__content">
+										
+											<p><strong>You Pass We Pay</strong>
+												<br />PartnerWorld is offering this promotion to all Business Partners</p>
+												
+												<p>Please talk to your companies APA for more information if you are interested in getting re-certified</p>
+											<p class="ibm-ind-link ibm-padding-bottom-0"><a href="https://www-356.ibm.com/partnerworld/wps/servlet/ContentHandler/partnerworld-public" class="ibm-cart-link">PartnerWorld</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="ibm-col-5-2 ibm-col-medium-5-5">
+									<div class="ibm-card ibm-border-gray-30">
+																<div class="ibm-card__heading ibm-h4 ibm-bold ibm-border-blue-50 " style="border-bottom-style: solid; border-bottom-width: 5px; padding-bottom: 10px; padding-top: 10px;">Blog Announcements</div>
+										
+										<div class="ibm-card__content">
+											
+											<div data-widget="carousel" data-dots="true">
+											   <div class="ibm-card--noborder">
+												 <div class="ibm-card__content">
+												   <h3 class="ibm-h4"><a href="https://www.ibm.com/blogs/ibm-training/new-ibm-rational-team-concert-v6-solution-specialist-c2010-825/">New: IBM Rational Team Concert V6 Solution Specialist (C2010-825)</a></h3>
+												   <p>The newly developed “IBM Certified Solution Specialist – Rational Team Concert V6” (C2010-825 ) credential and exam are now available at Pearson VUE for test takers to register for and take.</p>
+
+													<p>There is an assessment exam (A2010-825) available at a cost of 30$ as well, to find out how ready one is to take the real exam.</p>
+												 </div>
+											   </div>
+											   
+											   <div class="ibm-card--noborder">
+												 <div class="ibm-card__content">
+												   <h3 class="ibm-h4"><a href="https://www.ibm.com/blogs/ibm-training/new-ibm-certified-developer-apache-spark-1-6/">New: IBM Certified Developer – Apache Spark 1.6</a></h3>
+												   <p>IBM Analytics is excited to announce that the IBM Certified Developer – Apache Spark 1.6 Certificate is now available and that a brand new assessment test has just been published.</p>
+
+													<p>The IBM Certified Developer – Apache Spark 1.6 will certify that the successful candidate has the necessary skills to work with, transform, and act on data at a very large scale. The candidate will be able to build data pipelines and derive viable insights into the data using Apache Spark...</p>
+												 </div>
+											   </div>
+											   
+											   <div class="ibm-card--noborder">
+												 <div class="ibm-card__content">
+												   <h3 class="ibm-h4"><a href="https://www.ibm.com/blogs/ibm-training/smarter-process-technical-workshops-san-francisco-raleigh-austin/">Smarter Process Technical Workshops – San Francisco / Raleigh / Austin</a></h3>
+												   <p>Smarter Process Technical Workshops – San Francisco / Raleigh / Austin
+													Instructor led course – Classroom</p>
+
+													<p>Event overview
+													Smarter Process (BPM & ODM) Technology enablement for IBM business partners.
+													Learn about the latest capabilities of IBM’s Smarter Process portfolio in this 2-day workshop:...</p>
+														
+												 </div>
+											   </div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="ibm-col-5-2 ibm-col-medium-5-5">
+									<div class="ibm-card ibm-border-gray-30">
+																<div class="ibm-card__heading ibm-h4 ibm-bold ibm-border-blue-50 " style="border-bottom-style: solid; border-bottom-width: 5px; padding-bottom: 10px; padding-top: 10px;">Premium Certification</div>
+									
+										<div class="ibm-card__content">
+											
+											<p>IBM Professional Certification is pleased to announce our Premium Certificates are available, once again.</p>
+
+											<p>Each Premium Certificate is printed on an ultra-fine parchment paper and officially embossed with the platinum seal of the Professional Certification Program from IBM.</p>
+
+											<p>Visit the IBM Certification Marketplace to purchase the Premium Certificate, as well as test vouchers discount offerings, and other items of interest.</p>
+											
+											<br />
+											<br />
+											<br />
+											<p class="ibm-button-link"><a class="ibm-btn-sec ibm-btn-blue-50 ibm-fullwidth" href="http://emarketplace.pearsonvue.com/category-s/1919.htm?cm_mc_uid=42248492155514581349956&cm_mc_sid_50200000=1473273015">E-Marketplace</a></p>
+										</div>
+									</div>
+								</div>
+							</div> 
+					  
+					  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        
+        <div id="ibm-related-content">
+          <div id="ibm-merchandising-module">
+            <!-- MTE will generate this -->
+            <!-- <aside role="complementary" aria-label="Related content"> MTE dynamic modules populate in here. <aside> -->
+            <!-- /MTE -->
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- FOOTER_BEGIN -->
+      <div id="ibm-footer-module"><!-- Dynamic footer links inserted here inside a <section> --></div>
+      
+      
+      <footer role="contentinfo" aria-label="IBM">
+        <div id="ibm-footer">
+          <ul>
+            <li><a href="http://www.ibm.com/contact/us/en/">Contact</a></li>
+            <li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
+            <li><a href="http://www.ibm.com/legal/us/en/">Terms of use</a></li>
+            <li><a href="http://www.ibm.com/accessibility/us/en/">Accessibility</a></li>
+          </ul>
+        </div>
+      </footer>
+      <!-- FOOTER_END -->
+
+    </div>
+
+  </body>
 </html>
