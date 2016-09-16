@@ -1,6 +1,6 @@
 // index.js
 
-var REST_DATA = 'http://ibmcert.mybluemix.net/api/stage';
+var REST_DATA = 'http://ibmcert.mybluemix.net/api/ibmcert';
  
 var KEY_ENTER = 13; 
 var defaultItems = [];
@@ -11,7 +11,7 @@ function getParameterByName(name, url) {
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
         results = regex.exec(url);
     if (!results) return null;
-    if (!results[2]) return '';
+    if (!results[2]) return ''; 
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
@@ -42,12 +42,12 @@ function loadItems(){
     		
     
     	
-    		 $("#pwcode" ).append( item.pwcode); 
-    		 $("#description" ).append( item.description); 
-    		 $("#unit" ).append( item.unit); 
-    		 $("#subunit" ).append( item.subunit); 
-    		 $("#jobrole" ).append( item.jobrole); 
-    		 $("#skill" ).append( item.skill); 
+    		 $("#pwcode" ).append( item.ipwcode); 
+    		 $("#description" ).append( item.idescription); 
+    		 $("#unit" ).append( item.iunit); 
+    		 $("#subunit" ).append( item.isubunit); 
+    		 $("#jobrole" ).append( item.ijobrole); 
+    		 $("#skill" ).append( item.iskill); 
     		 
     		 
     	}, function(err){
